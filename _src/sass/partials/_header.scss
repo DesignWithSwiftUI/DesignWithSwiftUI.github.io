@@ -1,0 +1,63 @@
+
+header {
+    padding-top: 80px;
+    padding: 80px 60px 0;
+    display: flex;
+}
+
+.logo-text {
+    font-size: 0
+}
+
+.header__description {
+    font-size: 18px;
+    line-height: 26px;
+    flex-grow: 1;
+    padding-left: 84px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 100%;
+        left: 40px;
+        background: #491E54;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+    }
+}
+
+.logo-background {
+    object-fit: cover;
+    -webkit-mask-image: url("/assets/images/top-logo-mask.svg");
+    mask-image: url("/assets/images/top-logo-mask.svg");
+    pointer-events: none;
+}
+
+nav {
+    display: flex;
+    margin: 0 -4px;
+    position: relative;
+    bottom: 4px;
+
+    .button {
+        margin: 0 4px;
+    }
+}
+
+.header__logo {
+    position: relative
+}
+
+.subscribe-button {
+    position: absolute;
+    right: 0;
+    width: calc(47.61% - 40px);
+    bottom: 4px;
+}

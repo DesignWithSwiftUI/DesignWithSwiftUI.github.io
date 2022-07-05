@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #1A0926;
+    overflow-x: hidden;
+    color: #CF97C2;
+    font-family: trade-gothic-next, sans-serif;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1 {
+    font-family: obviously-wide;
+    font-weight: 800;
+    color: white
+}
+
+a {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.spacer {
+    flex-grow: 1;
+}
+
+.flex {
+    display: flex
+}
+
+@import "partials/components";
+@import "partials/header";

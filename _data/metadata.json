@@ -1,0 +1,21 @@
+{
+    "title": "Design with SwiftUI",
+    "url": "https://designwithswiftui.com/",
+    "language": "en",
+    "description": "Learn how to create efficient, beautiful, and delightful UI components with SwiftUI",
+    "feed": {
+      "subtitle": "Learn how to create efficient, beautiful, and delightful UI components with SwiftUI",
+      "filename": "feed.xml",
+      "path": "/feed/feed.xml",
+      "id": "https://designwithswiftui.com/"
+    },
+    "jsonfeed": {
+      "path": "/feed/feed.json",
+      "url": "https://designwithswiftui.com/feed/feed.json"
+    },
+    "author": {
+      "name": "Kushagra Agarwal",
+      "email": "kushagra@hey.com",
+      "url": "https://twitter.com/kushsolitary/"
+    }
+  }
