@@ -69,3 +69,24 @@
         width: 32px;
     }
 }
+
+.tag-list {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 -4px;
+}
+
+.tag {
+    background: #1A0926;
+    border-radius: 8px;
+    padding: 2px 8px 4px 8px;
+    font-family: "obviously-narrow";
+    letter-spacing: 0.4px;
+    font-weight: 600;
+    margin: 0 4px;
+    text-transform: uppercase;
+}
+
+.tag--highlight {
+    color: #FBDE3B;
+}

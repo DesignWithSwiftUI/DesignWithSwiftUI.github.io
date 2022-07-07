@@ -3,8 +3,12 @@ layout: layouts/home.njk
 ---
 
 <div class="container  latest-post">
-    {% articleTile 
-        heading='Create a Marquee (Ticker) List Effect', 
-        excerpt='A marquee list or a ticker tape is a fun control when you want to a large number of items to scroll automatically and infinitely, without having the user manually scroll to view them. We’ll create this in pure SwiftUI.' 
-    %}
+    {%- for article in collections.article.slice(0, 1) -%}
+        {% component 
+            "components/tile.vue", 
+            showDate=true,
+            isLatest=true,
+            post=article.data
+        %}
+    {%- endfor -%}
 </div>

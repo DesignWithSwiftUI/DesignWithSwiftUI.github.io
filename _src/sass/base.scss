@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -76,6 +77,14 @@ a {
 .latest-post {
     margin-top: 80px;
 }
+
+/* Media Queries */
+@media only screen and (max-width: 1050px) {
+    .latest-post {
+        margin-top: 40px;
+    }
+}
+
 
 @import "partials/components";
 @import "partials/header";
