@@ -257,7 +257,7 @@ nav .button {
 .subscribe-button {
   position: absolute;
   right: 0;
-  width: calc(47.61% - 40px);
+  width: calc(54.61% - 40px);
   bottom: 4px;
 }
 
@@ -312,19 +312,64 @@ nav .button {
 
 .tile__excerpt {
   font-size: 20px;
-  line-height: 28px;
-  margin-top: 10px;
+  line-height: 32px;
+  margin-top: 24px;
 }
 
 .tile--article {
   padding: 48px;
+  display: flex;
 }
 .tile--article .tile__heading {
   font-size: 36px;
-  margin-top: 8px;
+  margin-top: 16px;
 }
 .tile--article .button {
-  margin-top: 32px;
+  margin-top: 40px;
+}
+
+.tile__info {
+  flex: 1;
+}
+
+.tile__preview {
+  width: 380px;
+  margin-left: 40px;
+  border-radius: 24px 24px 0 0;
+  -webkit-border-radius: 24px 24px 0 0;
+  -moz-border-radius: 24px 24px 0 0;
+  -ms-border-radius: 24px 24px 0 0;
+  -o-border-radius: 24px 24px 0 0;
+  overflow: hidden;
+  margin-bottom: -48px;
+  position: relative;
+}
+
+.tile__preview__container {
+  padding-top: 202.3622047244%;
+  width: 100%;
+  position: absolute;
+}
+.tile__preview__container video {
+  object-fit: cover;
+  object-position: top center;
+  width: 88.97637795%;
+  height: 95.07133593%;
+  position: absolute;
+  top: 2.464%;
+  left: 5.51181102%;
+}
+.tile__preview__container:after {
+  content: "";
+  position: absolute;
+  padding-top: 202.3622047244%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: url(/assets/images/iphone-frame.png) no-repeat;
+  background-size: contain;
+  background-position: top center;
+  z-index: 2;
 }
 
 @media only screen and (max-width: 600px) {
