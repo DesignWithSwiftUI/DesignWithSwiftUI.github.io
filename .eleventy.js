@@ -6,4 +6,7 @@ module.exports = function (eleventyConfig) {
 
     // Copy assets
     eleventyConfig.addPassthroughCopy("assets")
+
+    // Components
+    eleventyConfig.addShortcode('articleTile', require('./components/articleTile'))
 };

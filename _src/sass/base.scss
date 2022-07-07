@@ -22,6 +22,12 @@ h1 {
     color: white
 }
 
+h2 {
+    font-family: obviously;
+    font-weight: 700;
+    color: white;
+}
+
 a {
     color: white;
     text-decoration: none;
@@ -35,9 +41,43 @@ a {
     flex-grow: 1;
 }
 
+.spacer--8 {
+    width: 8px;
+    height: 8px;
+}
+
 .flex {
     display: flex
 }
 
+.background-glow {
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background: url(/assets/images/heading-glow.png);
+        height: 463px;
+        width: 1096px;
+        pointer-events: none;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+    }
+}
+
+.latest-post {
+    margin-top: 80px;
+}
+
 @import "partials/components";
 @import "partials/header";
+@import "partials/tile";
+

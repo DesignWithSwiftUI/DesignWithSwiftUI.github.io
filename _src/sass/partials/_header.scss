@@ -65,7 +65,7 @@ nav {
 }
 
 .header__logo {
-    position: relative
+    position: relative;
 }
 
 .subscribe-button {
@@ -76,7 +76,7 @@ nav {
 }
 
 /* Media Queries */
-@media only screen and (max-width: 1070px) {
+@media only screen and (max-width: 1050px) {
     .subscribe-button { display: none; }
     .header__logo { width: 100%; }
     .video-container {
