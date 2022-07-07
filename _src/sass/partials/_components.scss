@@ -33,16 +33,25 @@
     -o-transition: 0.15s ease;
 }
 
-.button:active, .button:focus, .button--active {
+.button:focus, .button--active {
     outline: none;
     background: #5F436F;
     box-shadow: 0px 0px 0 2px #9B75AF;
 
     &:hover {
         box-shadow: 0px 0px 0 2px #9B75AF, 0px 0px 10px rgba(81, 35, 97, 0.75), 0px 6px 20px rgba(80, 57, 93, 0.75);
-    }
-            
+    }            
 }
+
+.button:active {
+    transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    -moz-transform: translateY(4px);
+    -ms-transform: translateY(4px);
+    -o-transform: translateY(4px);
+    box-shadow: 0px 0px 10px rgba(81, 35, 97, 0.75), 0px 6px 20px rgba(80, 57, 93, 0.75) !important;
+}
+
 
 .button--small {
     height: 32px;

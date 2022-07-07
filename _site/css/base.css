@@ -70,13 +70,22 @@ a:hover {
   box-shadow: 0px 0px 10px rgba(81, 35, 97, 0.75), 0px 6px 20px rgba(80, 57, 93, 0.75);
 }
 
-.button:active, .button:focus, .button--active {
+.button:focus, .button--active {
   outline: none;
   background: #5F436F;
   box-shadow: 0px 0px 0 2px #9B75AF;
 }
-.button:active:hover, .button:focus:hover, .button--active:hover {
+.button:focus:hover, .button--active:hover {
   box-shadow: 0px 0px 0 2px #9B75AF, 0px 0px 10px rgba(81, 35, 97, 0.75), 0px 6px 20px rgba(80, 57, 93, 0.75);
+}
+
+.button:active {
+  transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+  -moz-transform: translateY(4px);
+  -ms-transform: translateY(4px);
+  -o-transform: translateY(4px);
+  box-shadow: 0px 0px 10px rgba(81, 35, 97, 0.75), 0px 6px 20px rgba(80, 57, 93, 0.75) !important;
 }
 
 .button--small {
@@ -96,7 +105,6 @@ a:hover {
 }
 
 header {
-  padding-top: 80px;
   padding: 80px 60px 0;
   display: flex;
 }
@@ -128,11 +136,25 @@ header {
   -o-border-radius: 3px;
 }
 
+.video-container {
+  width: 504px;
+  height: 0;
+  padding-top: 26.1904761905%;
+  position: relative;
+}
+
 .logo-background {
   object-fit: cover;
   -webkit-mask-image: url("/assets/images/top-logo-mask.svg");
+  -webkit-mask-size: contain;
   mask-image: url("/assets/images/top-logo-mask.svg");
+  mask-size: contain;
   pointer-events: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 nav {
@@ -154,6 +176,41 @@ nav .button {
   right: 0;
   width: calc(47.61% - 40px);
   bottom: 4px;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1070px) {
+  .subscribe-button {
+    display: none;
+  }
+  .header__logo {
+    width: 100%;
+  }
+  .video-container {
+    width: 100%;
+  }
+  header {
+    display: block;
+  }
+  .header__description {
+    display: block;
+    padding-left: 0;
+    padding-top: 48px;
+  }
+  .header__description:before {
+    height: 6px;
+    width: 100%;
+    left: 0;
+    top: 24px;
+  }
+  .header__description nav {
+    margin-top: 24px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  header {
+    padding: 20px 0 0;
+  }
 }
 
 /*# sourceMappingURL=base.css.map */
