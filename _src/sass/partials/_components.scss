@@ -73,7 +73,8 @@
 .tag-list {
     display: flex;
     align-items: flex-start;
-    margin: 0 -4px;
+    flex-wrap: wrap;
+    margin: -4px;
 }
 
 .tag {
@@ -83,10 +84,17 @@
     font-family: "obviously-narrow";
     letter-spacing: 0.4px;
     font-weight: 600;
-    margin: 0 4px;
-    text-transform: uppercase;
+    margin: 4px;
+    font-size: 16px;
 }
 
 .tag--highlight {
     color: #FBDE3B;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .tag {
+        font-size: 14px;
+    }
 }

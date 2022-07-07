@@ -4,9 +4,12 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     background: #1A0926;
     overflow-x: hidden;
+}
+
+body {
     color: #CF97C2;
     font-family: trade-gothic-next, sans-serif;
 }
@@ -25,7 +28,7 @@ h1 {
 
 h2 {
     font-family: obviously;
-    font-weight: 700;
+    font-weight: 600;
     color: white;
 }
 
@@ -82,6 +85,16 @@ a {
 @media only screen and (max-width: 1050px) {
     .latest-post {
         margin-top: 40px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .latest-post {
+        margin-top: 60px;
+        margin-bottom: 200px;
+    }
+    .container {
+        padding: 0 16px;
     }
 }
 
