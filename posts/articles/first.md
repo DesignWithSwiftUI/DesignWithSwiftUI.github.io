@@ -1,5 +1,5 @@
 ---
-tags: article
+tags: articles
 date: 2022-07-07
 title: Create a Marquee (Ticker) List Effect
 categories: ["Tutorial"]

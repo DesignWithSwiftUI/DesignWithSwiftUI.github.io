@@ -1,0 +1,83 @@
+.tips-section {
+  margin-top: 80px;
+}
+
+.gradient-heading {
+  display: inline-flex;
+  position: relative;
+}
+.gradient-heading:before, .gradient-heading:after {
+  content: "";
+  height: 6px;
+  width: 10019px;
+  background: #B647D9;
+  position: absolute;
+  left: -9999px;
+  top: calc(50% + 6px);
+  transform: translateY(-50%);
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.gradient-heading:after {
+  left: unset;
+  right: -10059px;
+  background: #EB7D71;
+}
+
+.gradient-heading h3 {
+  font-size: 40px;
+  font-family: obviously-wide, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding-left: 60px;
+  background: url(/assets/images/bg-gradient.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.tips-grid__item .tile {
+  height: 100%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .tips-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .gradient-heading h3 {
+    font-size: 20px;
+    font-weight: 700;
+    padding-left: 16px;
+  }
+  .gradient-heading:before, .gradient-heading:after {
+    display: none;
+  }
+  .tips-section {
+    margin-top: 40px;
+  }
+  .tips-grid {
+    margin-top: 16px;
+  }
+}
+
+/*# sourceMappingURL=general.css.map */

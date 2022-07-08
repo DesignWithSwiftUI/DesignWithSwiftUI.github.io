@@ -75,6 +75,11 @@ a:hover {
   -o-transform: translate(-50%, -50%);
 }
 
+.background-glow--small:before {
+  height: 231.5px;
+  width: 548px;
+}
+
 .latest-post {
   margin-top: 80px;
 }
@@ -88,10 +93,90 @@ a:hover {
 @media only screen and (max-width: 600px) {
   .latest-post {
     margin-top: 60px;
-    margin-bottom: 200px;
   }
   .container {
     padding: 0 16px;
+  }
+}
+.tips-section {
+  margin-top: 80px;
+}
+
+.gradient-heading {
+  display: inline-flex;
+  position: relative;
+}
+.gradient-heading:before, .gradient-heading:after {
+  content: "";
+  height: 6px;
+  width: 10019px;
+  background: #B647D9;
+  position: absolute;
+  left: -9999px;
+  top: calc(50% + 6px);
+  transform: translateY(-50%);
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.gradient-heading:after {
+  left: unset;
+  right: -10059px;
+  background: #EB7D71;
+}
+
+.gradient-heading h3 {
+  font-size: 40px;
+  font-family: obviously-wide, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding-left: 60px;
+  background: url(/assets/images/bg-gradient.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.tips-grid__item .tile {
+  height: 100%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .tips-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .gradient-heading h3 {
+    font-size: 20px;
+    font-weight: 700;
+    padding-left: 16px;
+  }
+  .gradient-heading:before, .gradient-heading:after {
+    display: none;
+  }
+  .tips-section {
+    margin-top: 40px;
+  }
+  .tips-grid {
+    margin-top: 16px;
   }
 }
 .button {
@@ -310,36 +395,50 @@ nav .button {
   backdrop-filter: blur(200px);
 }
 
+.tile--highlight {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 4px 1px rgba(251, 222, 59, 0.2);
+}
+
 .tile__excerpt {
   font-size: 20px;
   line-height: 32px;
   margin-top: 24px;
 }
 
-.tile--article {
+.tile--large {
   padding: 48px;
   display: flex;
 }
-.tile--article .tile__heading {
-  font-size: 36px;
+.tile--large .tile__heading {
+  font-size: 32px;
   margin-top: 16px;
 }
-.tile--article .button {
+.tile--large .button {
   margin-top: 40px;
+}
+
+.tile--small {
+  padding: 32px;
+  display: flex;
+}
+.tile--small .tile__heading {
+  font-size: 22px;
+  margin-top: 16px;
+}
+.tile--small .button {
+  margin-top: 24px;
 }
 
 .tile__info {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .tile__preview {
   width: 380px;
   margin-left: 40px;
-  border-radius: 16px;
-  -webkit-border-radius: 16px;
-  -moz-border-radius: 16px;
-  -ms-border-radius: 16px;
-  -o-border-radius: 16px;
   overflow: hidden;
   margin-bottom: -48px;
   position: relative;
@@ -380,11 +479,11 @@ nav .button {
     -ms-border-radius: 24px 24px 40px 40px;
     -o-border-radius: 24px 24px 40px 40px;
   }
-  .tile--article {
+  .tile--large, .tile--small {
     padding: 24px;
     flex-direction: column-reverse;
   }
-  .tile--article .tile__heading {
+  .tile--large .tile__heading, .tile--small .tile__heading {
     font-size: 24px;
     line-height: 36px;
     margin-top: 16px;
@@ -399,13 +498,20 @@ nav .button {
     width: 100%;
   }
   .tile__preview {
-    width: 100%;
-    margin-left: 0;
-    margin-bottom: 40px;
-    padding-top: 100%;
+    display: none;
+    width: calc(100% + 32px);
+    margin-top: -16px;
+    margin-left: -16px;
+    margin-bottom: 24px;
+    padding-top: 50%;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
   }
   .tile__preview__container {
-    padding-top: 100%;
+    padding-top: 50%;
     position: absolute;
     top: 0;
     left: 0;
@@ -415,6 +521,8 @@ nav .button {
     height: 100%;
     top: 0;
     left: 0;
+    border-radius: 16px;
+    object-position: center 25%;
   }
   .tile__preview__container:after {
     padding-top: 0;

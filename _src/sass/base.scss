@@ -77,6 +77,13 @@ a {
     }
 }
 
+.background-glow--small {
+    &:before { 
+        height: calc(463px / 2);
+        width: calc(1096px / 2);
+    }
+}
+
 .latest-post {
     margin-top: 80px;
 }
@@ -91,7 +98,6 @@ a {
 @media only screen and (max-width: 600px) {
     .latest-post {
         margin-top: 60px;
-        margin-bottom: 200px;
     }
     .container {
         padding: 0 16px;
@@ -99,6 +105,7 @@ a {
 }
 
 
+@import "general";
 @import "partials/components";
 @import "partials/header";
 @import "partials/tile";

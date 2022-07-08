@@ -3,7 +3,7 @@ layout: layouts/home.njk
 ---
 
 <div class="container  latest-post">
-    {%- for article in collections.article.slice(0, 1) -%}
+    {%- for article in collections.articles.slice(0, 1) -%}
         {% component 
             "components/tile.vue", 
             showDate=true,
@@ -12,3 +12,25 @@ layout: layouts/home.njk
         %}
     {%- endfor -%}
 </div>
+
+<div class="container  tips-section">
+    {% component 'components/gradient-heading.vue', text='Tips & Tricks' %}
+    <div class="tips-grid">
+        {%- for tip in collections.tips.slice(0, 3) -%}
+        <div class="tips-grid__item">
+            {% component 
+                "components/tile.vue", 
+                showDate=false,
+                isMinimal=true,
+                post=tip.data
+            %}
+        </div>
+        {%- endfor -%}
+    </div>
+</div>
+
+<div class="container  tips-section">
+    {% component 'components/gradient-heading.vue', text='Recent Articles' %}
+</div>
+
+<div style="height: 1000px"></div>
