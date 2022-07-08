@@ -3,7 +3,6 @@ tags: articles
 date: 2022-07-07
 title: Create a Marquee (Ticker) List Effect
 categories: ["Tutorial"]
-permalink: "article/{{title | slugify}}/index.html"
 preview: "/assets/videos/test-2.mp4"
 ---
 

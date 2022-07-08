@@ -1,0 +1,3 @@
+{
+    "permalink": "tips/{{ title | slug }}.html"
+}
